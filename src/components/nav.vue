@@ -6,7 +6,7 @@
         <router-link to="/basic">3.基础使用</router-link>
         <router-link to="/imgCompress">4.图片压缩</router-link>
         <router-link to="/Rem">5.测试插件postcss-pxtorem</router-link>
-        <router-link to="/Rem">6.父子组件生命周期执行顺序</router-link>
+        <router-link to="/LifeCycle">6.父子组件生命周期执行顺序</router-link>
     </div>
 </template>
 

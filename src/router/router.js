@@ -15,6 +15,7 @@ import welcome from './../components/login/welcome.vue'
 
 import basic from './../components/basic/basic.vue'
 import Rem from './../components/rem/Rem.vue'
+import LifeCycle from './../components/lifeCycle/LifeCycle.vue'
 
 
 Vue.use(VueRouter)
@@ -76,6 +77,10 @@ const routes = [
     {
         path: '/Rem',
         component: Rem
+    },
+    {
+        path: '/LifeCycle',
+        component: LifeCycle
     }
     
 ]

@@ -1,6 +1,8 @@
 
 module.exports = {
-    productionSourceMap: true,
+    // productionSourceMap：false: 生产包避免出现在浏览器控制台源码，webpack://文件夹
+    // 且false可不用生成map文件
+    productionSourceMap: false,
     devServer: {
         port: 8090,
         open: true
