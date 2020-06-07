@@ -6,7 +6,7 @@
         <router-link to="/basic">3.基础使用</router-link>
         <router-link to="/imgCompress">4.图片压缩</router-link>
         <router-link to="/Rem">5.测试插件postcss-pxtorem</router-link>
-        <router-link to="/LifeCycle">6.父子组件生命周期执行顺序</router-link>
+        <router-link to="/LifeCycle">6.生命周期执行顺序</router-link>
     </div>
 </template>
 
@@ -23,6 +23,30 @@
         },
         created() {
            
+        },
+        beforeCreate(){
+            console.log('0-1-beforeCreate');
+        },
+        created() {
+           console.log('0-2-created');
+        },
+        beforeMount(){
+            console.log('0-3-beforeMount');
+        },
+        mounted(){
+            console.log('0-4-mounted');
+        },
+        beforeUpdate(){
+            console.log('0-5-beforeUpdate');
+        },
+        updated(){
+            console.log('0-6-updated');
+        },
+        beforeDestroy(){
+            console.log('0-7-beforeDestroy');
+        },
+        destroyed(){
+            console.log('0-8-destroyed');
         }
     }
 </script>
