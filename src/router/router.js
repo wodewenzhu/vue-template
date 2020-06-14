@@ -15,7 +15,13 @@ import welcome from './../components/login/welcome.vue'
 
 import basic from './../components/basic/basic.vue'
 import Rem from './../components/rem/Rem.vue'
-import LifeCycle from './../components/lifeCycle/LifeCycle.vue'
+
+
+// API
+import ConfigData from          './../components/config/ConfigData.vue'
+import ConfigDOM from           './../components/config/ConfigDOM.vue'
+import ConfigCycle from         './../components/config/ConfigCycle.vue'
+import ConfigResource from      './../components/config/ConfigResource.vue'
 
 
 Vue.use(VueRouter)
@@ -78,10 +84,24 @@ const routes = [
         path: '/Rem',
         component: Rem
     },
+
+    // API配置项
     {
-        path: '/LifeCycle',
-        component: LifeCycle
-    }
+        path: '/ConfigData',
+        component: ConfigData
+    },
+    {
+        path: '/ConfigDOM',
+        component: ConfigDOM
+    },
+    {
+        path: '/ConfigCycle',
+        component: ConfigCycle
+    },
+    {
+        path: '/ConfigResource',
+        component: ConfigResource
+    },
     
 ]
 

@@ -5,6 +5,7 @@ import store from './store/index.js'
 
 import './assets/js/rem'
 
+
 // console.log(Vue.prototype.constructor.name)
 Vue.config.productionTip = false
 

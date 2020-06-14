@@ -6,7 +6,11 @@
         <router-link to="/basic">3.基础使用</router-link>
         <router-link to="/imgCompress">4.图片压缩</router-link>
         <router-link to="/Rem">5.测试插件postcss-pxtorem</router-link>
-        <router-link to="/LifeCycle">6.生命周期执行顺序</router-link>
+        
+        <router-link to="/ConfigData">6.选项/数据/...</router-link>
+        <router-link to="/ConfigDOM">7.选项/DOM/...</router-link>
+        <router-link to="/ConfigCycle">8.选项/生命周期</router-link>
+        <router-link to="/ConfigResource">9.选项/资源</router-link>
     </div>
 </template>
 
@@ -20,9 +24,6 @@
         },
         methods: {
             
-        },
-        created() {
-           
         },
         beforeCreate(){
             console.log('0-1-beforeCreate');

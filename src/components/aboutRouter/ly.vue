@@ -13,6 +13,7 @@
         name: 'app',
         data() {
             return {
+                timer: null,
                 user: ''
             }
         },
@@ -37,6 +38,14 @@
             window.onpopstate = function(){
                 alert('路由发生变化')
             }
+            this.timer = setInterval(() => {
+                console.log('我是一个定时器')
+            }, 1000)
+        },
+        beforeDestroy(){
+            // 某个组件若使用了定时器的话，那么在该组件销毁前记得清除定时器
+            // 因为定时器是全局变量window的属性，不清除的话，会在其它路由中继续执行
+            clearInterval(this.timer)
         }
     }
 </script>

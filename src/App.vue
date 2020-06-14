@@ -32,6 +32,7 @@ export default {
   },
   mounted() {
     
+    
   }
 }
 </script>
@@ -58,6 +59,15 @@ a{
     border-radius: 6px;
     overflow: hidden;
     padding: 10px;
+    font-size: 32px;
+    line-height: 2em;
+    margin-top: 60px;
+}
+.bold{
+  font-weight: bold;
+}
+.red {
+  color: red;
 }
 
 </style>
