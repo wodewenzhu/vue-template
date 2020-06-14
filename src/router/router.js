@@ -22,6 +22,7 @@ import ConfigData from          './../components/config/ConfigData.vue'
 import ConfigDOM from           './../components/config/ConfigDOM.vue'
 import ConfigCycle from         './../components/config/ConfigCycle.vue'
 import ConfigResource from      './../components/config/ConfigResource.vue'
+import ConfigZuhe from          './../components/config/ConfigZuhe.vue'
 
 
 Vue.use(VueRouter)
@@ -101,6 +102,10 @@ const routes = [
     {
         path: '/ConfigResource',
         component: ConfigResource
+    },
+    {
+        path: '/ConfigZuhe',
+        component: ConfigZuhe
     },
     
 ]

@@ -63,6 +63,12 @@
             twoPoint(val){
                 return Number(val).toFixed(2);
             }
+        },
+
+        mounted(){
+            console.log(this)
+            console.log(this.$parent)
+            console.log(this.$children)
         }
         
     }
