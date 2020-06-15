@@ -31,7 +31,26 @@ export default {
     this.setUserParams();
   },
   mounted() {
+
+    try{
+      let a = 9;
+      a.sortt()
+    } catch(err) {
+      console.log(err)
+    }
+    console.log('执行')
     
+
+    
+    // window.onerror = function(e){
+    //   console.log(e)
+    //   console.log(123)
+    //   return true
+    // }
+
+    // let a = 9;
+    // a.sort()
+
     
   }
 }
