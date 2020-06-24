@@ -18,11 +18,12 @@ import Rem from './../components/rem/Rem.vue'
 
 
 // API
-import ConfigData from          './../components/config/ConfigData.vue'
-import ConfigDOM from           './../components/config/ConfigDOM.vue'
-import ConfigCycle from         './../components/config/ConfigCycle.vue'
-import ConfigResource from      './../components/config/ConfigResource.vue'
-import ConfigZuhe from          './../components/config/ConfigZuhe.vue'
+import ConfigData from            './../components/config/ConfigData.vue'
+import ConfigDOM from             './../components/config/ConfigDOM.vue'
+import ConfigCycle from           './../components/config/ConfigCycle.vue'
+import ConfigResource from        './../components/config/ConfigResource.vue'
+import ConfigZuhe from            './../components/config/ConfigZuhe.vue'
+import ConfigOthers from          './../components/config/ConfigOthers.vue'
 
 
 Vue.use(VueRouter)
@@ -106,6 +107,10 @@ const routes = [
     {
         path: '/ConfigZuhe',
         component: ConfigZuhe
+    },
+    {
+        path: '/ConfigOthers',
+        component: ConfigOthers
     },
     
 ]

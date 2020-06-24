@@ -12,6 +12,7 @@
         <router-link to="/ConfigCycle">8.选项/生命周期</router-link>
         <router-link to="/ConfigResource">9.选项/资源</router-link>
         <router-link to="/ConfigZuhe">10.选项/组合</router-link>
+        <router-link to="/ConfigOthers">11.选项/其它</router-link>
     </div>
 </template>
 
