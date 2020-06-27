@@ -17,13 +17,19 @@ import basic from './../components/basic/basic.vue'
 import Rem from './../components/rem/Rem.vue'
 
 
-// API
+// API--选项
 import ConfigData from            './../components/config/ConfigData.vue'
 import ConfigDOM from             './../components/config/ConfigDOM.vue'
 import ConfigCycle from           './../components/config/ConfigCycle.vue'
 import ConfigResource from        './../components/config/ConfigResource.vue'
 import ConfigZuhe from            './../components/config/ConfigZuhe.vue'
 import ConfigOthers from          './../components/config/ConfigOthers.vue'
+
+// API--实例
+import ShiliProperty from          './../components/config/ShiliProperty.vue'
+import ShiliData from          './../components/config/ShiliData.vue'
+import ShiliEvent from          './../components/config/ShiliEvent.vue'
+import ShiliLifestyle from          './../components/config/ShiliLifestyle.vue'
 
 
 Vue.use(VueRouter)
@@ -111,6 +117,22 @@ const routes = [
     {
         path: '/ConfigOthers',
         component: ConfigOthers
+    },
+    {
+        path: '/ShiliProperty',
+        component: ShiliProperty
+    },
+    {
+        path: '/ShiliData',
+        component: ShiliData
+    },
+    {
+        path: '/ShiliEvent',
+        component: ShiliEvent
+    },
+    {
+        path: '/ShiliLifestyle',
+        component: ShiliLifestyle
     },
     
 ]

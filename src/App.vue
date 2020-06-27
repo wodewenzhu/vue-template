@@ -82,6 +82,9 @@ a{
     line-height: 2em;
     margin-top: 60px;
 }
+.show-box p{
+    padding: 5px 0;
+}
 .bold{
   font-weight: bold;
 }

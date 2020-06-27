@@ -11,6 +11,7 @@
 
 <script>
 export default {
+    name: 'SonDemo',
     props: {
         fatherData: {
             // type定义数据类型
@@ -34,6 +35,9 @@ export default {
     methods: {
         changeName() {
             this.name = "李四";
+        },
+        ddd(){
+            console.log('我是子组件定义的方法，执行了')
         }
     },
     beforeCreate() {

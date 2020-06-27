@@ -1,114 +1,78 @@
 <template>
     <div id="dm">
-       主要包含如下3项：
-       <p>1-- parent</p> 
-       <p>2-- mixins</p> 
-       <p>3-- extends</p>
-       <p>4-- provide/inject</p>
+        主要包含如下3项：
+        <p>1-- name</p>
+        <p>2-- delimiters</p>
+        <p>3-- functional</p>
+        <p>4-- model</p>
+        <p>5-- inheritAttrs</p>
+        <p>6-- comments</p>
 
-       <div class="show-box">
-           <p class="bold">1-- parent</p> 
-           <p><span class="bold">类型：</span>Vue instance</p>
-           <p><span class="bold">详细：</span>指定已创建的实例之父实例，在两者之间建立父子关系。</p>
-           <p>子实例可以用 this.$parent 访问父实例，子实例被推入父实例的 $children 数组中。</p>
-           <p>节制地使用 $parent 和 $children - 它们的主要目的是作为访问组件的应急方法。更推荐用 props 和 events 实现父子组件通信</p>
-           <p>网上介绍资料较少，很少使用，略......</p>
-       </div>
+        <div class="show-box">
+            <p class="bold">1-- name</p>
+            <p><span class="bold">类型：</span>string</p>
+            <p><span class="bold">限制：</span>只有作为组件选项时起作用</p>
+            <p>允许组件模板递归地调用自身。组件 ID 自动作为组件的 name</p>
+            <p>指定 name 选项的另一个好处是便于调试。有名字的组件有更友好的警告信息。</p>
+            <p>有 vue-devtools，未命名组件将显示【AnonymousComponent】，无语义。有 name 选项，可以获得更有语义信息的组件树。</p>
+        </div>
 
-       <div class="show-box">
-           <p class="bold">2-- mixins</p> 
-           <p><span class="bold">类型：</span>Array[Object]</p>
-           <p><span class="bold">详细：</span>mixins 选项接收一个混入对象的数组。这些混入对象可以像正常的实例对象一样包含实例选项，这些选项将会被合并到最终的选项中</p>
-           <p>就是说，如果你的混入包含一个 created 钩子，而创建组件本身也有一个，那么两个函数都会被调用。</p>
-           <p>Mixin 钩子按照传入顺序依次调用，并在调用组件自身的钩子之前被调用。</p>
-       </div>
+        <div class="show-box">
+            <p class="bold">2-- delimiters </p>
+            <p><span class="bold">类型：</span>Array[string]</p>
+            <p><span class="bold">限制：</span>只在完整构建版本中的浏览器内编译时可用。</p>
+            <p>改变我们插值的符号（默认是用双花括号{{}}）</p>
+            <p>这里用小括号插入的值，示例：(name)。。发现无效，注意看上面的限制</p>
+            <p>讲真，目前还觉得没有使用价值。。。</p>
+        </div>
 
-       <div class="show-box">
-           <p class="bold">3-- extends</p> 
-           <p><span class="bold">类型：</span>Object | Function</p>
-           <p><span class="bold">详细：</span>允许声明扩展另一个组件 (可以是一个简单的选项对象或构造函数)</p>
-           <p>这主要是为了便于扩展单文件组件。</p>
-           <p>这和 上面的mixins 类似。</p>
-           <p>extends和mixins类似，通过暴露一个extends对象到组件中使用。</p>
-           <p>extends会比mixins先执行。执行顺序：extends  > mixins > 组件自身</p>
-       </div>
+        <div class="show-box">
+            <p class="bold">3-- functional </p>
+            <p><span class="bold">类型：</span>boolean</p>
+            <p>使组件无状态 (没有 data) 和无实例 (没有 this 上下文)。他们用一个简单的 render 函数返回虚拟节点使它们渲染的代价更小。</p>
+            <p>略。。。</p>
+        </div>
 
-       <div class="show-box">
-           <p class="bold">4-- provide/inject</p> 
-           <p><span class="bold">类型：</span>provide：Object | () => Object</p>
-           <p><span class="bold">类型：</span>inject：Array[string] | { [key: string]: string | Symbol | Object }</p>
-           <p><span class="bold">详细：</span>provide 和 inject 主要在开发高阶插件/组件库时使用。并不推荐用于普通应用程序代码中</p>
-           <p>这对选项需要一起使用，以允许一个祖先组件向其所有子孙后代注入一个依赖，</p>
-           <p><span class="bold">不论组件层次有多深，</span>并在起上下游关系成立的时间里始终生效。</p>
-           <p>provide 选项应该是一个对象或返回一个对象的函数。该对象包含可注入其子孙的 property。</p>
-           <p>extends会比mixins先执行。执行顺序：extends  > mixins > 组件自身</p>
-           <br>
-           <p>例如：</p>
-           <p>// 祖先组件  
-               export default {
-                    provide: {
-                        name: 'lee'
-                    }
-                }
-            </p>
-            <p>// 后代  组件  
-                export default {
-                    inject: ['name'],
-                    mounted () {
-                        console.log(this.name);  // lee
-                    }
-                }
-            </p>
-            <br>
-            <p><span class="bold">提示：</span>provide 和 inject 绑定并不是可响应的。这是刻意为之的。然而，如果你传入了一个可监听的对象，那么其对象的 property 还是可响应的。</p>
-            <p>所以用它们进行组件间传值并不好用</p>
-       </div>
+        <div class="show-box">
+            <p class="bold">4-- model </p>
+            <p>详情：略。。。</p>
+            <p>参考链接：https://blog.csdn.net/liu_jun_tao/article/details/90232658</p>
+        </div>
 
+        <div class="show-box">
+            <p class="bold">5-- inheritAttrs </p>
+            <p>详情：略。。。</p>
+            <p>参考链接：https://www.jianshu.com/p/ce8ca875c337</p>
+        </div>
+
+        <div class="show-box">
+            <p class="bold">6-- comments </p>
+            <p><span class="bold">类型：</span>boolean</p>
+            <p><span class="bold">限制：</span>只在完整构建版本中的浏览器内编译时可用。</p>
+            <p>当设为 true 时，将会保留且渲染模板中的 HTML 注释。默认行为是舍弃它们。</p>
+            <p>讲真，目前还觉得没有使用价值。。。</p>
+        </div>
 
     </div>
 </template>
 
 <script>
-    export default {
-        // components 用于实现自定义组件
-        components: {
-            
-        },
-        data() {
-            return {
-                num: 3.1425926
-            }
-        },
-        methods: {
+export default {
+    name: "",
+    // components 用于实现自定义组件
+    components: {},
+    data() {
+        return {
+            name: "张三"
+        };
+    },
 
-        },
-        created(){
-            console.log(0)
-        },
-        mounted(){
-           console.log(111) 
-        }, 
-        parent: function(){
+    delimiters: ["(", ")"],
 
-        },
-        mixins: [
-            {
-                // mixins里的mounted要比组件自身的mounted先执行，其它选项也是如此
-                mounted() {
-                    console.log(222)
-                }
-            }
-        ],
-        extends: {
-            // extends 里的mounted要比 mixins 的mounted先执行
-            mounted() {
-                console.log(333)
-            }
-        }
-        
-    }
+    comments: true,
+
+};
 </script>
 
 <style>
-    
 </style>
